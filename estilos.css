@@ -1,0 +1,223 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #FFF3DC;
+  color: #5C3A00;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: #E67E22;
+  padding: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main h1 {
+  text-align: center;
+  color: #D35400;
+}
+
+main h2 {
+  color: #D35400;
+}
+
+.portada {
+  width: 100%;
+  max-width: 900px;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  margin: 20px auto;
+  border-radius: 6px;
+}
+
+.foto-pagina {
+  width: 100%;
+  max-width: 600px;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  margin: 20px auto;
+  border-radius: 6px;
+}
+
+/* COTIZADOR */
+.promocion {
+  background-color: #FFFDF5;
+  border: 1px solid #F0C27A;
+  border-radius: 6px;
+  padding: 15px;
+  max-width: 1100px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.promocion h2 {
+  margin: 0;
+  text-align: center;
+}
+
+.promocion label {
+  font-weight: bold;
+}
+
+.promocion select,
+.promocion input {
+  padding: 8px;
+  font-size: 16px;
+}
+
+.promocion button {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #E67E22;
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+
+#resultado {
+  font-weight: bold;
+}
+
+/* RESUMEN DE COMPRA */
+.resumen-compra {
+  max-width: 560px;
+  margin: 24px auto;
+  padding: 20px;
+  background-color: #FFFDF5;
+  border: 2px solid #E67E22;
+  border-radius: 10px;
+}
+
+.resumen-compra button {
+  padding: 10px 16px;
+  cursor: pointer;
+  background-color: #E67E22;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+input[type="number"] {
+  max-width: 90px;
+  padding: 7px;
+}
+
+/* PÁGINAS: INICIO, NOSOTROS, INFORMACIÓN Y CONTACTO */
+.contenido {
+  background-color: #FFFDF5;
+  border: 1px solid #F0C27A;
+  border-radius: 6px;
+  padding: 15px;
+  max-width: 1100px;
+  margin: 20px auto;
+}
+
+.contenido h2 {
+  margin: 0 0 10px 0;
+}
+
+.contenido form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contenido label {
+  font-weight: bold;
+}
+
+.contenido input,
+.contenido textarea {
+  padding: 8px;
+  font-size: 16px;
+}
+
+.contenido button {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #E67E22;
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+
+footer {
+  text-align: center;
+  background-color: #E67E22;
+  color: white;
+  padding: 15px;
+}
+
+/* ORGANIZACIÓN DE PRODUCTOS CON CSS GRID */
+.contenedor-productos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 15px;
+}
+
+.producto {
+  background-color: #FFFDF5;
+  border: 1px solid #F0C27A;
+  border-radius: 6px;
+  padding: 15px;
+}
+
+.producto img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.precio {
+  font-weight: bold;
+  color: #D35400;
+}
+
+/* ADAPTACIÓN PARA TABLETAS */
+@media (max-width: 900px) {
+  .contenedor-productos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .contenedor-productos {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin: 15px auto;
+    padding: 10px;
+  }
+
+  .producto {
+    width: 100%;
+    max-width: 350px;
+    justify-self: center;
+  }
+}

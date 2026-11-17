@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuestros productos - Mi Negocio</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="productos.html">Productos</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="informacion.html">Información</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Nuestros productos</h1>
+
+    <section class="promocion" aria-labelledby="titulo-cotizador">
+      <h2 id="titulo-cotizador">Cotiza tu compra</h2>
+      <label for="producto">Producto</label>
+      <select id="producto">
+        <option value="">Selecciona un producto</option>
+        <option value="35">Café americano - $35</option>
+        <option value="48">Capuchino - $48</option>
+        <option value="65">Chilaquiles verdes con pollo - $65</option>
+        <option value="55">Sándwich de pollo - $55</option>
+        <option value="30">Croissant de mantequilla - $30</option>
+        <option value="40">Jugo natural de naranja - $40</option>
+      </select>
+      <label for="cantidad">Cantidad</label>
+      <input id="cantidad" type="number" min="1" max="20" step="1">
+      <button id="boton-promocion" type="button">Ver promoción</button>
+      <button id="calcular" type="button">Calcular</button>
+      <button id="limpiar" type="button">Limpiar</button>
+      <p id="mensaje-promocion" aria-live="polite"></p>
+      <p id="resultado" aria-live="polite"></p>
+    </section>
+
+    <div class="contenedor-productos">
+      <article class="producto">
+        <img src="img/americano.jpg" alt="Café americano">
+        <h2>Café americano</h2>
+        <p>Café negro recién hecho, servido caliente para empezar el día.</p>
+        <p class="precio">$35.00</p>
+        <label for="cantidad-1">Cantidad:</label>
+        <input type="number" id="cantidad-1" min="0" step="1" value="0">
+        <p>Subtotal: $<span id="subtotal-1">0.00</span></p>
+      </article>
+
+      <article class="producto">
+        <img src="img/capuchino.jpg" alt="Capuchino">
+        <h2>Capuchino</h2>
+        <p>Espresso con leche vaporizada y espuma, con un toque de canela.</p>
+        <p class="precio">$48.00</p>
+        <label for="cantidad-2">Cantidad:</label>
+        <input type="number" id="cantidad-2" min="0" step="1" value="0">
+        <p>Subtotal: $<span id="subtotal-2">0.00</span></p>
+      </article>
+
+      <article class="producto">
+        <img src="imagenes/producto3.jpg" alt="Chilaquiles verdes con pollo">
+        <h2>Chilaquiles verdes con pollo</h2>
+        <p>Totopos con salsa verde, pollo, crema y queso. El favorito de la casa.</p>
+        <p class="precio">$65.00</p>
+        <label for="cantidad-3">Cantidad:</label>
+        <input type="number" id="cantidad-3" min="0" step="1" value="0">
+        <p>Subtotal: $<span id="subtotal-3">0.00</span></p>
+      </article>
+
+      <article class="producto">
+        <img src="imagenes/producto4.jpg" alt="Sándwich de pollo">
+        <h2>Sándwich de pollo</h2>
+        <p>Pan tostado con pollo, lechuga, jitomate y mayonesa.</p>
+        <p class="precio">$55.00</p>
+        <label for="cantidad-4">Cantidad:</label>
+        <input type="number" id="cantidad-4" min="0" step="1" value="0">
+        <p>Subtotal: $<span id="subtotal-4">0.00</span></p>
+      </article>
+
+      <article class="producto">
+        <img src="img/pan.jpg" alt="Croissant de mantequilla">
+        <h2>Croissant de mantequilla</h2>
+        <p>Pan hojaldrado, crujiente por fuera y suave por dentro.</p>
+        <p class="precio">$30.00</p>
+        <label for="cantidad-5">Cantidad:</label>
+        <input type="number" id="cantidad-5" min="0" step="1" value="0">
+        <p>Subtotal: $<span id="subtotal-5">0.00</span></p>
+      </article>
+
+      <article class="producto">
+        <img src="imagenes/producto6.jpg" alt="Jugo natural de naranja">
+        <h2>Jugo natural de naranja</h2>
+        <p>Jugo recién exprimido, sin azúcar añadida. Fresco y natural.</p>
+        <p class="precio">$40.00</p>
+        <label for="cantidad-6">Cantidad:</label>
+        <input type="number" id="cantidad-6" min="0" step="1" value="0">
+        <p>Subtotal: $<span id="subtotal-6">0.00</span></p>
+      </article>
+    </div>
+
+    <section class="resumen-compra">
+      <h2>Resumen de mi compra</h2>
+      <button type="button" id="calcular-compra">Calcular compra</button>
+      <p>Importe: $<span id="importe-compra">0.00</span></p>
+      <p>Descuento: $<span id="descuento-compra">0.00</span></p>
+      <p>Total a pagar: $<span id="total-compra">0.00</span></p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
